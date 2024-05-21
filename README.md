@@ -43,7 +43,7 @@ The badges used here are explained below:
  
 # Quick Start Demo
 
-![Demo Preview](https://source.unsplash.com/random/1280x720)
+![Demo Preview](https://firebasestorage.googleapis.com/v0/b/rishibose1901-f5ff6.appspot.com/o/Capture.PNG?alt=media&token=51f3f927-b17b-4068-92df-2a3187a7174b)
 
 I believe that you should bring value to the reader as soon as possible. You should be able to get the user up and running with your project with minimal friction.
 
