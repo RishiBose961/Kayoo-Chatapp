@@ -6,6 +6,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 const port = process.env.PORT || 5000;
 import userRoutes from "./routes/userRoutes.js";
 import conversationRoutes from "./routes/conversation.routes.js"
+import messageRoutes from "./routes/message.routes.js"
 import connectDB from "./config/db.js";
 import { app,server } from "./socket/socket.js";
 
@@ -19,6 +20,7 @@ app.use(cookieParser())
 
 app.use("/v1/users", userRoutes);
 app.use("/v1/conversations", conversationRoutes)
+app.use("/v1/m", messageRoutes)
 
 app.get("/", (req, res) => res.send("server is ready"));
 

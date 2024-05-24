@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import groovyWalkAnimation from "../../../public/groovyWalkAnimation.json";
+import groovyWalkAnimation from "../../assets/groovyWalkAnimation.json";
 const NoSelectedChat = () => {
   return (
     <div>

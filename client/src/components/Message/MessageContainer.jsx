@@ -12,6 +12,7 @@ const MessageContainer = () => {
       setSelectedConversation(null);
     };
   }, [setSelectedConversation]);
+
   return (
     <div>
       {!selectedConversation ? (
@@ -20,7 +21,7 @@ const MessageContainer = () => {
         <>
           <div className="bg-indigo-600 rounded-xl px-4 py-3 text-white sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
             <p className="text-center font-medium sm:text-left">
-              {selectedConversation?.username}
+              {selectedConversation[0]?.username}
             </p>
           </div>
           <Messages />

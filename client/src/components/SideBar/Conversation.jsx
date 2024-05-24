@@ -25,19 +25,18 @@ const Conversation = ({ i }) => {
     queryKey: ["fetchSearchConv", friendId],
     queryFn: fetchSearchConvs,
   });
-
   //Online User
 
   const { onlineUsers } = useScoketContext();
 
   const isOnline = onlineUsers.includes(fetchSearchConvData?._id);
 
-  const isSelected = selectedConversation?._id === fetchSearchConvData?._id;
+  const isSelected = selectedConversation?.[0]?._id === fetchSearchConvData?._id;
 
   return (
     <div
       className="mt-4 mx-3 lg:w-[550px]"
-      onClick={() => setSelectedConversation(fetchSearchConvData)}
+      onClick={() => setSelectedConversation([fetchSearchConvData,i?._id])}
     >
       <div
         className={`flex justify-between items-center cursor-pointer border ${
@@ -54,9 +53,6 @@ const Conversation = ({ i }) => {
           <div>
             <div className="text-xl font-bold">
               <span className="">{fetchSearchConvData?.username}</span>
-            </div>
-            <div className="text-sm text-gray-500">
-              <span>{fetchSearchConvData?.email}</span>
             </div>
           </div>
         </div>

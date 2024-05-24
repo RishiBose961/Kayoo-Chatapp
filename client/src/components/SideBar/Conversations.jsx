@@ -8,9 +8,6 @@ const Conversations = () => {
 
     const { conversationData } = getConversation();
 
-
-    
-  
   return (
     <div className="flex sm:h-[450px] mt-10 rounded-lg overflow-hidden" style={{ height: height/1.5 }}>
       <div className=" overflow-auto">
