@@ -33,6 +33,7 @@ const Conversation = ({ i }) => {
 
   const isSelected = selectedConversation?.[0]?._id === fetchSearchConvData?._id;
 
+
   return (
     <div
       className="mt-4 mx-3 lg:w-[550px]"
@@ -43,7 +44,7 @@ const Conversation = ({ i }) => {
           isSelected
             ? "bg-gradient-to-r from-violet-200 to-pink-200 text-black"
             : ""
-        } border-violet-500 rounded-xl  px-6 py-2`}
+        } border-violet-500 rounded-xl px-6 py-2`}
       >
         <div className="flex justify-start items-center space-x-3">
           <img
@@ -51,13 +52,13 @@ const Conversation = ({ i }) => {
             src={`https://api.dicebear.com/8.x/lorelei/svg?seed=${fetchSearchConvData?.username}`}
           />
           <div>
-            <div className="text-xl font-bold">
+            <div className="text-xl font-bold hidden lg:flex">
               <span className="">{fetchSearchConvData?.username}</span>
             </div>
           </div>
         </div>
         <div>
-          <p>{isOnline ? "Online" : "Offline"}</p>
+          <p className="hidden lg:flex">{isOnline ? "Online" : "Offline"}</p>
         </div>
       </div>
     </div>

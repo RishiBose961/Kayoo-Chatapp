@@ -1,12 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import useConversation from "../../zustand/useConversation";
-import { Trash2 } from "lucide-react";
-import useDelConversation from "../../hooks/useDelConversation";
+
 
 const Message = ({ message }) => {
   const { userInfo } = useSelector((state) => state.auth);
-  const { deleteConversation } = useDelConversation();
   const { selectedConversation } = useConversation();
   const fromMe = message.senderId === userInfo._id;
   const chatClassName = fromMe ? "chat-end" : "chat-start";
@@ -36,10 +34,6 @@ const Message = ({ message }) => {
         </div>
         <div className={`flex ${chatFlex} items-center`}>
           <div className="chat-bubble">{message.message}</div>
-          <Trash2
-            className=" cursor-pointer"
-            onClick={()=>deleteConversation(message._id)}
-          />
         </div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
